@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #F5F7FB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    height: 100vh;
+}
+
+.presentation{
+    text-align: center;
+    color: #293264;
+}
+
+.presentation h1{
+    font-size: 2rem;
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    margin: 0;
+}
+
+.pres-btn{
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    border: none;
+    background: #293264;
+    color: #F5F7FB;
+    padding: 1em 4em;
+    border-radius: 15px;
+    margin-top: 1em;
+}
+
+.quiz{
+    border-bottom: solid 1px #DBDEF0;
+    padding-bottom: 1em;
+    color: #293264;
+}
+
+.answers{
+    display: flex;
+}
+
+.ans{
+    font-size: .7rem;
+    font-weight: 600;
+    border: #4D5B9E solid 1px;
+    border-radius: 6px;
+    padding: .25em .5em;
+    margin: 0;
+    margin-right: 1em;
+    align-self: flex-start;
+}
+
+.question{
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+}
+
+.quiz-btn, .reset-btn{
+    font-family: 'Inter', sans-serif;
+    font-size: .8rem;
+    border: none;
+    background-color: #4D5B9E;
+    color: #F5F7FB;
+    padding: 1em 2.5em;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 1em;
+}
+
+.tally-reset{
+    text-align: center;
+    margin-top: 1em;
+}
+
+.quiz-btn{
+    display: block;
+
+}
+
+.reset-btn, .points{
+    margin: 0;
+    display: inline-block;
+}
+
+.points{
+    margin-right: 2em;
+}
+
+.quiz-btn:hover,
+.quiz-btn:focus,
+.reset-btn:hover,
+.reset-btn:focus{
+    background-color: #293264;
+    color: white;
+}
+
+.blob-1{
+    position: fixed;
+    top: 75%;
+    right: 70%;
+    width: 297px;
+    height: 235px;
+    border-radius: 83% 27% 54% 46% / 51% 23% 77% 49%;
+    background: #DEEBF8;
+}
+
+.blob-2{
+    position: fixed;
+    bottom:80%;
+    left: 60%;
+    width: 297px;
+    height: 235px;
+    border-radius: 83% 17% 54% 46% / 51% 23% 77% 49%;
+    background: #FFFAD1;
+    transform: rotate(50deg)
+}
+
+.blob-3{
+    position: fixed;
+    top: 90%;
+    right: 85%;
+    width: 297px;
+    height: 235px;
+    border-radius: 83% 17% 54% 46% / 51% 23% 77% 49%;
+    background: #DEEBF8;
+}
+
+.blob-4{
+    position: fixed;
+    bottom:90%;
+    left: 70%;
+    width: 297px;
+    height: 235px;
+    border-radius: 83% 17% 54% 46% / 51% 23% 77% 49%;
+    background: #FFFAD1;
+    transform: rotate(50deg)
+}
+
+.app{
+    position: relative;
+}
