@@ -17,7 +17,7 @@ export default function App(){
     
     function getQA(){
         fetch("https://opentdb.com/api.php?amount=5&category=11&difficulty=medium&type=multiple")
-        // "https://opentdb.com/api.php?amount=5&category=10&type=multiple"
+        
         
             .then(res => res.json())
             .then(data => setQuiz(data.results))
@@ -81,12 +81,6 @@ export default function App(){
         return {answers: item, question: questionsDecoded[index]}
     })
     
-    // console.log(quiz)
-
-    // const allData = incorrectObj.map((item, index) => 
-    // item.concat(correctDecoded[index])).map((item,index) => {
-    //     return {answers: item, question: questionsDecoded[index]}
-    // })
     
     const [quizQA, setQuizQA] = React.useState([])
     
