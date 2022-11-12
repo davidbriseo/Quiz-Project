@@ -71,7 +71,7 @@ body{
     padding: 1em 2.5em;
     border-radius: 10px;
     margin: 0 auto;
-    margin-top: 1em;
+    margin-top: 2em;
 }
 
 .tally-reset{
@@ -81,7 +81,6 @@ body{
 
 .quiz-btn{
     display: block;
-
 }
 
 .reset-btn, .points{

@@ -2,8 +2,6 @@ import React from "react"
 import Presentation from "./Presentation"
 import Quiz from "./Quiz"
 import {nanoid} from "nanoid"
-// import {he} from "he"
-import "./style.css"
 
 export default function App(){
     
@@ -17,7 +15,7 @@ export default function App(){
     
     function getQA(){
         fetch("https://opentdb.com/api.php?amount=5&category=11&difficulty=medium&type=multiple")
-        
+        // "https://opentdb.com/api.php?amount=5&category=10&type=multiple"
         
             .then(res => res.json())
             .then(data => setQuiz(data.results))
@@ -33,6 +31,7 @@ export default function App(){
         "&ntilde;": "ñ",
         "&eacute;": "é",
         "&aacute;": "á",
+        "&oacute;": "ó",
         "&amp;": "&",
         "&uuml;": "ü",
         "&rsquo;": "’",
@@ -58,8 +57,7 @@ export default function App(){
         )
     )
     
-    const incorrectObj = incorrectDecoded.map(items => 
-        items.map(item=>{
+    const incorrectObj = incorrectDecoded.map(items => items.map(item=>{
             return {
                 ans: item,
                 correct: false,
@@ -80,7 +78,6 @@ export default function App(){
     const allData = incorrectObj.map((item,index) => {
         return {answers: item, question: questionsDecoded[index]}
     })
-    
     
     const [quizQA, setQuizQA] = React.useState([])
     
@@ -133,7 +130,7 @@ export default function App(){
         
         quizQA.map(qa => qa.answers.map( ans =>{
             if (ans.correct && ans.selected){
-                return setPoints(prevPoints => prevPoints += 1)
+                return  setPoints(prevPoints => prevPoints += 1)
             }
         }))
         
@@ -158,7 +155,7 @@ export default function App(){
         <main className="app">
             {!displayQuiz && <Presentation startQuiz={startQuiz}/>}
             {displayQuiz && questionAnswer}
-            {displayQuiz && !tally && 
+            {displayQuiz && !tally &&
                 <button className="quiz-btn" onClick={checkAnswers}>
                     Check answers
                 </button>

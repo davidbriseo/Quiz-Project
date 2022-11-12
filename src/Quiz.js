@@ -1,7 +1,6 @@
 import React from "react"
 import {nanoid} from "nanoid"
 import Answers from "./Answers"
-import "./style.css"
 
 export default function Quiz(props){
     
